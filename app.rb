@@ -21,13 +21,14 @@ post '/visit' do
   @username = params[:username]
   @phone = params[:phone]
   @date_time = params[:date_time]
+  @color = params[:color]
 
   @title = "Спасибо!"
-  @message = "Уважаемый #{@username}, мы ждём вас #{@date_time}. Ваша парикмахер #{@baber}"
+  @message = "Уважаемый #{@username}, мы ждём вас #{@date_time}. Ваша парикмахер #{@baber}, цвет окраски #{@color}"
 
   # запишем в файл то, что ввёл клиент
   f = File.open './public/users.txt', 'a'
-  f.write "Имя: #{@username}, телефон: #{@phone}, дата и время: #{@date_time}. Парикмахер: #{@baber}\n"
+  f.write "Имя: #{@username}, телефон: #{@phone}, дата и время: #{@date_time}. Парикмахер: #{@baber}, цвет окраски #{@color}\n"
   f.close
 
   erb :message
