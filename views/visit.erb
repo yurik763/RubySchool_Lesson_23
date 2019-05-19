@@ -5,23 +5,22 @@
 
   <div class="form-group">
     <label>Ваше имя</label>
-    <input name="username" type="text" class="form-control" placeholder="Ваше имя">
+    <input id="bbb" name="username" type="text" class="form-control" placeholder="Ваше имя">
   </div>
 
    <div class="form-group">
     <label>Ваше телефон</label>
-    <input name="phone" type="text" class="form-control" placeholder="Ваше телефон">
+    <input name="phone" type="text" class="form-control ccc" placeholder="Ваше телефон">
    </div>
 
    <div class="form-group">
     <label>Время записи</label>
-    <input name="date_time" type="text" class="form-control" placeholder="Время записи">
+    <input id="aaa" name="date_time" type="text" class="form-control" placeholder="Время записи">
    </div>
 
   <div class="form-group">
     <label>Выбор парикмахер:</label>
-    <select name="baber">
-      <option value="none">Выберите парикмахера</option>
+    <select name="baber" class="form-control ccc">
       <option value="Walter White">Walter White</option>
       <option value="Jessie Pinkman">Jessie Pinkman</option>
       <option value="Gus Fring">Gus Fring</option>
@@ -31,3 +30,9 @@
   <button type="submit" class="btn btn-primary">Записаться</button>
 
 </form>
+
+<script type="text/javascript">
+ $('#aaa').css('background-color','yellow');
+ $("#bbb").css('background-color','red');
+ $('.ccc').css('background-color','blue');
+ </script>
